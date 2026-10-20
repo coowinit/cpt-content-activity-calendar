@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CPT 内容活动日历 · 演示
+  </title>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="page">
+   <header class="intro">
+    <h1>
+     内容发布活动日历
+    </h1>
+    <p>
+     以日期为维度查看 WordPress 自定义内容类型的发布与更新记录
+    </p>
+   </header>
+   <section aria-labelledby="calendarTitle" class="panel">
+    <div class="head">
+     <h2 id="calendarTitle">
+      内容活动
+     </h2>
+     <div class="controls">
+      <label class="sr-only" for="typeFilter">
+       内容类型
+      </label>
+      <select id="typeFilter">
+       <option value="all">
+        全部类型
+       </option>
+       <option value="product">
+        产品
+       </option>
+       <option value="case">
+        客户案例
+       </option>
+       <option value="news">
+        新闻文章
+       </option>
+      </select>
+      <label class="sr-only" for="yearFilter">
+       年份
+      </label>
+      <select id="yearFilter">
+      </select>
+     </div>
+    </div>
+    <div aria-label="年度活动日历，可左右滚动" class="scroll-area">
+     <div class="calendar">
+      <div class="weekday" style="top:0">
+       一
+      </div>
+      <div class="weekday" style="top:32px">
+       三
+      </div>
+      <div class="weekday" style="top:64px">
+       五
+      </div>
+      <div class="heat-wrap">
+       <div aria-label="每日发布记录热力图" class="heat-grid" id="heatGrid">
+       </div>
+       <div class="months" id="months">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="foot">
+     <span aria-live="polite" id="summary">
+     </span>
+     <div class="legend">
+      <span>
+       少
+      </span>
+      <span class="key">
+       <i style="background:#eef1f4">
+       </i>
+       <i style="background:#c7e1ff">
+       </i>
+       <i style="background:#89c3fc">
+       </i>
+       <i style="background:#4197ec">
+       </i>
+       <i style="background:#086ac7">
+       </i>
+      </span>
+      <span>
+       多
+      </span>
+     </div>
+    </div>
+   </section>
+   <p class="hint">
+    操作提示：鼠标悬停查看当天标题；点击日期查看记录详情。手机端可横向滑动日历并点击日期。
+   </p>
+  </main>
+  <div class="tooltip" id="tooltip" role="tooltip">
+  </div>
+  <div aria-hidden="true" class="overlay" id="overlay">
+   <div aria-labelledby="modalTitle" aria-modal="true" class="modal" role="dialog">
+    <div class="modal-head">
+     <div>
+      <h3 id="modalTitle">
+      </h3>
+      <p id="modalSub">
+      </p>
+     </div>
+     <button aria-label="关闭详情" class="close" id="closeModal">
+      ×
+     </button>
+    </div>
+    <div class="modal-body" id="modalBody">
+    </div>
+   </div>
+  </div>
+  <script defer="" src="assets/js/app.js">
+  </script>
+ </body>
+</html>
+
